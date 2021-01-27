@@ -1,3 +1,7 @@
+list.of.packages <- c("music")
+new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages)
+
 library(music)
 # 
 # buildChord("C4", chord = "major", play = T, plot = T,formatNotation = TRUE)
